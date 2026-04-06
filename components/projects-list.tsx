@@ -64,12 +64,12 @@ function ProjectCard({
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <button
+    <div
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
-        "w-full text-left p-5 rounded-xl border border-border bg-card",
+        "w-full text-left p-5 rounded-xl border border-border bg-card cursor-pointer",
         "transition-all duration-300 ease-out",
         "hover:shadow-lg hover:border-primary/20 hover:-translate-y-0.5"
       )}
@@ -121,7 +121,7 @@ function ProjectCard({
         <span>{project.filesCount} files</span>
         <span>{project.chatsCount} chats</span>
       </div>
-    </button>
+    </div>
   )
 }
 
